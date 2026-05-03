@@ -19,7 +19,7 @@ jobs:
           
       - name: Install Libraries
         # We point directly to the file inside the gdelt directory
-        run: pip install -r gdelt/requirements.txt
+        run: pip install -r requirements.txt
         
       - name: Run main2
         env:
