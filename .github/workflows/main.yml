@@ -18,9 +18,11 @@ jobs:
           python-version: '3.10'
           
       - name: Install Libraries
-        run: pip install -r requirements.txt
+        # We point directly to the file inside the gdelt directory
+        run: pip install -r gdelt/requirements.txt
         
       - name: Run main2
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: python main2.py
+        # We tell Python to execute the script inside the gdelt directory
+        run: python gdelt/main2.py
